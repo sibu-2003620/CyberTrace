@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>URL Analyzer | CyberTrace AI</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="navbar"><a class="logo" href="index.html"><span>Cyber</span>Trace <small>AI</small></a><button class="menu-btn" id="menuBtn">☰</button><nav id="nav"><a href="index.html">Home</a><a class="active" href="analyzer.html">URL Analyzer</a><a href="dashboard.html">Dashboard</a><a href="history.html">History</a><a href="awareness.html">Awareness</a><a href="quiz.html">Quiz</a><a href="login.html" class="nav-login">Login</a></nav><button class="theme-btn" id="themeBtn">☾</button></header>
+
+<main class="page">
+<div class="page-head"><span>AI URL ANALYZER</span><h1>Is this URL <em>safe?</em></h1><p>Enter a URL and CyberTrace will inspect common phishing indicators.</p></div>
+<section class="analyzer-layout">
+<div class="panel">
+<h2>Analyze website</h2>
+<p class="muted">For demo purposes, this version uses a browser-side heuristic engine. It does not visit the URL.</p>
+<label for="urlInput">Website URL</label>
+<div class="input-wrap"><span>🔗</span><input id="urlInput" placeholder="https://example.com" autocomplete="off"><button id="analyzeBtn" class="btn primary">Analyze</button></div>
+<div class="examples"><button data-url="https://www.google.com">Try Google</button><button data-url="https://github.com">Try GitHub</button><button data-url="http://secure-login-verification-account.example.com">Try suspicious demo</button></div>
+<div id="result" class="result hidden"></div>
+</div>
+<div class="panel tips"><h3>What we inspect</h3><div class="tip">🔒 <div><b>HTTPS</b><p>Secure transport is checked as one signal.</p></div></div><div class="tip">🔤 <div><b>Suspicious words</b><p>Login, verify, bonus, password and similar patterns can increase risk.</p></div></div><div class="tip">🌐 <div><b>Domain structure</b><p>Long URLs, many subdomains and unusual symbols are considered.</p></div></div><div class="tip">⚠️ <div><b>Important</b><p>A score is not proof. Never enter passwords into an unfamiliar website.</p></div></div></div>
+</section>
+</main>
+<footer><p>CyberTrace AI • Educational portfolio project</p></footer>
+<script src="js/app.js"></script><script src="js/analyzer.js"></script>
+</body></html>

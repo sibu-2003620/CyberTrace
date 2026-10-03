@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS cybertrace;
+USE cybertrace;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS scans (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    url TEXT NOT NULL,
+    prediction VARCHAR(30) NOT NULL,
+    risk_score INT NOT NULL,
+    confidence DECIMAL(5,2),
+    scanned_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);

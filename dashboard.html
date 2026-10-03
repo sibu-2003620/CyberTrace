@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Dashboard | CyberTrace AI</title><link rel="stylesheet" href="css/style.css"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head>
+<body>
+<header class="navbar"><a class="logo" href="index.html"><span>Cyber</span>Trace <small>AI</small></a><button class="menu-btn" id="menuBtn">☰</button><nav id="nav"><a href="index.html">Home</a><a href="analyzer.html">URL Analyzer</a><a class="active" href="dashboard.html">Dashboard</a><a href="history.html">History</a><a href="awareness.html">Awareness</a><a href="quiz.html">Quiz</a><a href="login.html" class="nav-login">Login</a></nav><button class="theme-btn" id="themeBtn">☾</button></header>
+<main class="page"><div class="page-head"><span>SECURITY ANALYTICS</span><h1>Your <em>dashboard</em></h1><p>Live statistics generated from scans stored in this browser.</p></div>
+<div class="stat-grid"><div class="stat-card"><span>Total Scans</span><strong id="totalScans">0</strong><small>All analyzer checks</small></div><div class="stat-card"><span>Safe</span><strong id="safeScans">0</strong><small>Low-risk results</small></div><div class="stat-card"><span>Suspicious</span><strong id="suspiciousScans">0</strong><small>Needs caution</small></div><div class="stat-card danger"><span>Phishing</span><strong id="phishingScans">0</strong><small>High-risk results</small></div></div>
+<div class="chart-grid"><div class="panel"><h2>Scan distribution</h2><canvas id="scanChart"></canvas></div><div class="panel"><h2>Risk trend</h2><canvas id="trendChart"></canvas></div></div>
+</main><footer><p>CyberTrace AI • Security analytics</p></footer><script src="js/app.js"></script><script src="js/dashboard.js"></script></body></html>
